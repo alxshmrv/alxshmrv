@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Маяк — local-first Wi-Fi trust center for macOS and Windows">
+  <title>Маяк — local-first Wi-Fi trust center for macOS and Windows</title>
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1124"/>
+      <stop offset="1" stop-color="#070a14"/>
+    </linearGradient>
+    <linearGradient id="mborder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b7cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#786ee8" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#786ee8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="mclip"><rect width="900" height="300" rx="20"/></clipPath>
+    <clipPath id="radar"><circle cx="705" cy="150" r="118"/></clipPath>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .blip { opacity: 0; animation: blip 4s linear infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes blip {
+        0% { opacity: 0; transform: scale(.4) }
+        3% { opacity: 1; transform: scale(1.6) }
+        10% { transform: scale(1) }
+        70% { opacity: .55 }
+        100% { opacity: 0 }
+      }
+      .ring { animation: ring 4s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes ring { from { transform: scale(.2); opacity: .8 } to { transform: scale(1); opacity: 0 } }
+      .pill rect { fill-opacity: .12; stroke-opacity: .55; }
+      .pill text { font-size: 13px; fill: #e2e6ff; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#mclip)">
+    <rect width="900" height="300" fill="url(#mbg)"/>
+    <circle cx="705" cy="150" r="190" fill="url(#halo)"/>
+
+    <!-- text block -->
+    <text class="mono" x="40" y="58" font-size="13" fill="#8b93b8" letter-spacing="3">FEATURED PROJECT · OPEN SOURCE</text>
+    <text class="sans" x="40" y="112" font-size="50" font-weight="800" fill="#ffffff">Маяк <tspan font-size="30" font-weight="500" fill="#8b93b8">/ mayak</tspan></text>
+    <text class="sans" x="40" y="150" font-size="18" fill="#c9d1ff">Local-first Wi-Fi trust center for macOS &amp; Windows.</text>
+    <text class="sans" x="40" y="176" font-size="18" fill="#c9d1ff">Explains your network, spots new neighbours —</text>
+    <text class="sans" x="40" y="202" font-size="18" fill="#c9d1ff">no account, no cloud, nothing leaves the device.</text>
+
+    <g class="mono pill">
+      <g transform="translate(40 230)"><rect width="66" height="28" rx="14" fill="#f59e0b" stroke="#f59e0b"/><text x="33" y="19" text-anchor="middle">Rust</text></g>
+      <g transform="translate(114 230)"><rect width="82" height="28" rx="14" fill="#22d3ee" stroke="#22d3ee"/><text x="41" y="19" text-anchor="middle">Tauri 2</text></g>
+      <g transform="translate(204 230)"><rect width="74" height="28" rx="14" fill="#60a5fa" stroke="#60a5fa"/><text x="37" y="19" text-anchor="middle">React</text></g>
+      <g transform="translate(286 230)"><rect width="110" height="28" rx="14" fill="#8b7cff" stroke="#8b7cff"/><text x="55" y="19" text-anchor="middle">local-first</text></g>
+      <g transform="translate(404 230)"><rect width="56" height="28" rx="14" fill="#a3e635" stroke="#a3e635"/><text x="28" y="19" text-anchor="middle">MIT</text></g>
+    </g>
+
+    <!-- radar -->
+    <g stroke="#22d3ee" fill="none">
+      <circle cx="705" cy="150" r="118" stroke-opacity="0.5"/>
+      <circle cx="705" cy="150" r="88" stroke-opacity="0.25"/>
+      <circle cx="705" cy="150" r="58" stroke-opacity="0.25"/>
+      <circle cx="705" cy="150" r="28" stroke-opacity="0.25"/>
+      <path d="M587 150H823M705 32V268" stroke-opacity="0.15"/>
+    </g>
+    <circle class="ring" cx="705" cy="150" r="118" fill="none" stroke="#22d3ee" stroke-width="2"/>
+
+    <g clip-path="url(#radar)">
+      <g>
+        <path d="M705 150 L823 150 A118 118 0 0 0 788.4 66.6 Z" fill="url(#sweep)" transform="rotate(0 705 150)"/>
+        <line x1="705" y1="150" x2="823" y2="150" stroke="#67e8f9" stroke-width="2" filter="url(#mglow)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 705 150" to="360 705 150" dur="4s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- devices; delays match the sweep angle (clockwise from 3 o'clock, 4s per turn) -->
+    <g filter="url(#mglow)">
+      <circle class="blip" cx="770" cy="180" r="5" fill="#a3e635" style="animation-delay:.27s"/>
+      <circle class="blip" cx="690" cy="225" r="5" fill="#a3e635" style="animation-delay:1.08s"/>
+      <circle class="blip" cx="630" cy="160" r="5" fill="#f59e0b" style="animation-delay:1.97s"/>
+      <circle class="blip" cx="660" cy="85" r="5" fill="#a3e635" style="animation-delay:2.62s"/>
+      <circle class="blip" cx="745" cy="95" r="6" fill="#f472b6" style="animation-delay:3.39s"/>
+    </g>
+    <circle cx="705" cy="150" r="7" fill="#ffffff" filter="url(#mglow)"/>
+    <text class="mono" x="757" y="91" font-size="11" fill="#f472b6" opacity="0.9">new device?</text>
+
+    <rect x="0.5" y="0.5" width="899" height="299" rx="20" fill="none" stroke="url(#mborder)" stroke-opacity="0.55"/>
+  </g>
+</svg>
