@@ -56,16 +56,16 @@
 
 ## `$ git log --graph`
 
-<div align="center">
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-light.svg"/>
+    <img src="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-dark.svg" width="100%" alt="contribution snake"/>
+  </picture>
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-light.svg"/>
-  <img src="https://raw.githubusercontent.com/alxshmrv/alxshmrv/output/snake-dark.svg" width="100%" alt="contribution snake"/>
-</picture>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alxshmrv&layout=compact&langs_count=6&hide=html,css,objective-c,dockerfile,shell,batchfile&bg_color=0d1124&title_color=8b7cff&text_color=c9d1ff&border_color=8b7cff&border_radius=16&card_width=420" width="420" alt="top languages"/>
-
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alxshmrv&layout=compact&langs_count=6&hide=html,css,objective-c,dockerfile,shell,batchfile&bg_color=0d1124&title_color=8b7cff&text_color=c9d1ff&border_color=8b7cff&border_radius=16&card_width=420" width="420" alt="top languages"/>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&reversal=true&color=0:f472b6,50:22d3ee,100:8b7cff" width="100%" alt=""/>
